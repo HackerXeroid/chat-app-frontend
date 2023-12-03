@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 import io from "socket.io-client";
 import ChatBox from "./ChatBox";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://chat-app-backend-izu9.onrender.com");
 
 const ChatRoom = (props) => {
   const [chats, setChats] = useState([]);
