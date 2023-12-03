@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
 import uniqid from "uniqid";
-import io from "socket.io-client";
+import { io } from "socket.io-client";
+
 import ChatBox from "./ChatBox";
 
-const socket = io.connect("https://chat-app-backend-izu9.onrender.com");
+const socket = io("https://api.example.com", {
+  withCredentials: true,
+  extraHeaders: {
+    "my-custom-header": "abcd",
+  },
+});
 
 const ChatRoom = (props) => {
   const [chats, setChats] = useState([]);
