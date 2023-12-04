@@ -81,13 +81,14 @@ const ChatRoom = (props) => {
           <input
             type="text"
             value={newChat}
+            spellCheck="false"
             onChange={handleChatChange}
             onKeyDown={handleKeyDown}
-            className="border border-gray-300 p-2 rounded flex-grow"
+            className="border border-gray-300 p-2 rounded flex-grow username text-lg outline-blue-300 tracking-wider"
           />
           <button
             onClick={handleSendChat}
-            className="bg-blue-500 text-white px-4 py-2 rounded"
+            className="bg-blue-500 text-white px-4 py-2 rounded username"
           >
             Send
           </button>
